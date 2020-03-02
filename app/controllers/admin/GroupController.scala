@@ -81,7 +81,7 @@ class GroupController @Inject() (
     */
   def create = silhouette.SecuredAction(AllowedRole.admin).async(parse.json[ApiPartialGroup]) { implicit request =>
     toResult(Created) {
-      val group = request.body.toModel(0)
+      val group = request.body.toModel()
       groupService
         .create(group)
         .map(ApiGroup(_))

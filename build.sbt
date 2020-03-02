@@ -32,6 +32,7 @@ libraryDependencies ++= Seq(
   "org.flywaydb" % "flyway-core" % "4.1.2",
   "io.scalaland" %% "chimney" % "0.4.1",
   "commons-io" % "commons-io" % "2.6",
+  "org.yaml" % "snakeyaml" % "1.26",
   filters,
   guice
 )
